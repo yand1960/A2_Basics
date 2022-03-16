@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Person, Repository } from './repository';
 
-// 1. Показ множественных данных. См файлы repository.ts и шаблон people.component.html
+// 1. Показ множественных данных. См файлы repository.ts и шаблон people.component.v1.html
 // 2. Настройка маршрутизации (в стиле SPA). См. app-routing.module.ts и app.component.html
+// 3. Переход на другую страницу с параметром (см.компоненту person-delal 
+//и файл app-routing.module.ts как определить маршрут с параметром)
+// 4. Использование стиля master-detail (см. компоненту single-person и people.component.html)
+// 5. Content Projection (см. компоненту collapsible)
 
 @Component({
   selector: 'app-people',
