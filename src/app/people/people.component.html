@@ -1,0 +1,24 @@
+<h1>People ({{people.length}})</h1>
+<table>
+<tr *ngFor="let p of people" [ngClass]="{'low-paid': p.salary < lowPaidLevel}">
+    <td>{{p.firstName}}</td>
+    <td>{{p.lastName}} </td>
+    <td>
+        {{p.salary}} 
+        <span *ngIf="p.salary < 100000">
+            it is low
+        </span>
+    </td>
+    <!-- <td>
+        <app-single-person [person]="p"></app-single-person>
+    </td> -->
+    <td>
+        <a [routerLink]="['/person' , p]" >View details</a>
+    </td>
+    <td>
+        <img src="assets/images/{{p.photo}}" />
+    </td>
+</tr> 
+</table>
+Low paid people: {{lowPaidCount}}
+
